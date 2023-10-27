@@ -1,6 +1,6 @@
 # NuPhylo: NCLDV Phylogenetic marker tree creator
 A tool for making quick phylogenetic trees of Nucleocytoviricota marker genes. Just input a fasta file of your own marker proteins, select your chosen NCLDV marker gene, and NuPhylo will align your sequences to reference sequences and build a tree so that you can determine phylogenetic placement. To ensure your tree is not overwhelmed by reference sequences, a representative set of 5 references for each NCLDV family has been curated and annotated here to use in tree building. For certain markers, there are no representatives for certain families due to that family not having that specific marker gene. 
-![alt text](https://github.com/BenMinch/NuPhylo/edit/main/logo.png) "Logo Title Text 1")
+![alt text](https://github.com/BenMinch/NuPhylo/main/logo.png)
 
 
 ## Installation
