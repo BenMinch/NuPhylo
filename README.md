@@ -11,6 +11,7 @@ A tool for making quick phylogenetic trees of Nucleocytoviricota marker genes. J
 1. Fasttree (newest version)
 2. Python 3+
 3. mafft (v 7.453)
+4. Trimal (v 1.4)
 
 ### Installing NuPhylo
 
@@ -27,6 +28,7 @@ It is as easy as cloning this directory with `git clone https://github.com/BenMi
 1. -i: Your input fasta file
 2. -m: Marker to make a tree (Choices are MCP, PolB, A32, SF2, Topo2, RNAPL, RNAPS, TF2B, VLTF3)
 3. -o: Output folder to store the results.
+4. -e: Using this flag is optional, but when used it will align your sequences with an extended phylogeny that includes plant, animal, bacteria, archaeal, and fungal sequences. (Only avaliable for PolB, Topo2, RNAPL, RNAPS, and TF2B markers).
 
 ### Outputs
 1. allseqs.aln: An alignment file with all of your sequences aligned with reference sequences.
