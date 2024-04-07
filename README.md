@@ -49,6 +49,7 @@ Example: `python python NuPhylo.py -i Genome_MCP.faa,Genome_PolB.faa -m MCP,PolB
 Some warnings
 1. You cannot use -cat with the -e flag.
 2. By default, it will only include sequences in the concatenated alignment where all marker genes are present within a genome.
+3. If you are looking to do this, you should only have one copy of each marker per genome. To do this, you should not use the -a flag in NCLDV Markersearch.
 
 # Copyright
 NuPhylo Copyright (C) 2023 Benjamin Minch
