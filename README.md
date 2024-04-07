@@ -44,7 +44,7 @@ A csv file titled NuPhylo_itol_colors.csv has been provided to make annotating y
 
 If you want to make a tree of the concatenated alignment of multiple marker genes, you can do so with the -cat flag. In order to do this you will have to list multiple marker genes in the -m flag and multiple input files with the -i flag. Make sure the order of these matches and your genome name is consistent across all your marker gene files. 
 
-Example: `python python NuPhylo.py -i Genome_MCP.faa,Genome_PolB.faa -m MCP,PolB -o Output_folder -cat`
+Example: `python NuPhylo.py -i Genome_MCP.faa,Genome_PolB.faa -m MCP,PolB -o Output_folder -cat`
 
 Some warnings
 1. You cannot use -cat with the -e flag.
