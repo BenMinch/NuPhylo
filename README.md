@@ -12,6 +12,7 @@ A tool for making quick phylogenetic trees of Nucleocytoviricota marker genes. J
 2. Python 3+
 3. mafft (v 7.453)
 4. Trimal (v 1.4)
+5. catfasta2phyml for concat feature (https://github.com/nylander/catfasta2phyml)
 
 ### Installing NuPhylo
 
@@ -28,7 +29,8 @@ It is as easy as cloning this directory with `git clone https://github.com/BenMi
 1. -i: Your input fasta file
 2. -m: Marker to make a tree (Choices are MCP, PolB, A32, SF2, Topo2, RNAPL, RNAPS, TF2B, VLTF3)
 3. -o: Output folder to store the results.
-4. -e: Using this flag is optional, but when used it will align your sequences with an extended phylogeny that includes plant, animal, bacteria, archaeal, and fungal sequences. (Only avaliable for PolB, Topo2, RNAPL, RNAPS, and TF2B markers).
+4. -cat: Create a concatenated alignment with multiple marker genes
+5. -e: Using this flag is optional, but when used it will align your sequences with an extended phylogeny that includes plant, animal, bacteria, archaeal, and fungal sequences. (Only avaliable for PolB, Topo2, RNAPL, RNAPS, and TF2B markers).
 
 ### Outputs
 1. allseqs.aln: An alignment file with all of your sequences aligned with reference sequences.
@@ -37,6 +39,16 @@ It is as easy as cloning this directory with `git clone https://github.com/BenMi
 ### Visualizing your tree
 
 A csv file titled NuPhylo_itol_colors.csv has been provided to make annotating your tree in itol very easy. Just go into your tree in iTOL and create a new colorstrip dataset. You can then paste data from this csv file into your new dataset to visualize unique colors for each order and family.
+
+### New Feature: Concatenated alignment
+
+If you want to make a tree of the concatenated alignment of multiple marker genes, you can do so with the -cat flag. In order to do this you will have to list multiple marker genes in the -m flag and multiple input files with the -i flag. Make sure the order of these matches and your genome name is consistent across all your marker gene files. 
+
+Example: `python python NuPhylo.py -i Genome_MCP.faa,Genome_PolB.faa -m MCP,PolB -o Output_folder -cat`
+
+Some warnings
+1. You cannot use -cat with the -e flag.
+2. By default, it will only include sequences in the concatenated alignment where all marker genes are present within a genome.
 
 # Copyright
 NuPhylo Copyright (C) 2023 Benjamin Minch
